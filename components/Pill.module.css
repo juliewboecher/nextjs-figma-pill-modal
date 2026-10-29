@@ -1,0 +1,9 @@
+/* Figma: the component set "Pill". Use your tokens with var(). */
+
+/* Auto layout -> flexbox */
+.pill {
+}
+
+/* Type=Primary and Type=Secondary -> one class per type */
+
+/* State=Hover -> :hover and :focus-visible */
