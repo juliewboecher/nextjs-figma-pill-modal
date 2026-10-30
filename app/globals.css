@@ -8,16 +8,46 @@
  * - Font weights become numbers: Regular -> 400, Medium -> 500, Semi Bold -> 600
  */
 :root {
+  /* border-radius */
+  --border-radius-md: 24px;
+  --border-radius-full: 9999px;
+
+  /* btn-height */
+  --btn-height-md: 46px;
+
+  /* Gap */
+  --gap-md: 12px;
+
+  /* padding */
+  --padding-sm: 20px;
+  --padding-lg: 36px;
+
+  /* font-family */
+  --font-family-primary: "Inter", system-ui, sans-serif;
+
+  /* font-size */
+  --font-size-sm: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 32px;
+
+  /* font-weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+
   /* Color */
+  --color-primary: #af4043;
+  --color-secondary: #2f7fb8;
 
-  /* Typography – the font itself is loaded in app/layout.js */
-  --font-family-primary: var(--font-inter), sans-serif;
+  /* Color / Neutral */
+  --color-neutral-white: #ffffff;
+  --color-neutral-black: #000000;
+  --color-neutral-grey-900: #16161a;
+  --color-neutral-grey-800: #55554f;
+  --color-neutral-grey-200: #d6d6d0;
 
-  /* Spacing: gaps and paddings */
-
-  /* Sizes */
-
-  /* Border radius */
+  /* margin */
+  --margin-md: 0px;
 }
 
 * {

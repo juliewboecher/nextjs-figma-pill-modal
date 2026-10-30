@@ -2,11 +2,85 @@
 
 /* The dialog itself */
 .modal {
-  margin: auto; /* The reset in globals.css removes the centering of <dialog>, so add it back */
+  width: 500px;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-black);
+  border-radius: var(--border-radius-md);
+  background: var(--color-neutral-white);
+  box-shadow: 0 20px 48px -12px rgb(0 0 0 / 12%);
+  animation: modal-in 180ms ease-out both;
 }
 
-/* Auto layout -> flexbox */
+.modal::backdrop {
+  background: rgb(22 22 26 / 40%);
+}
 
-/* Separator, title and text */
+.closing {
+  animation: modal-out 180ms ease-in both;
+}
 
-/* Smart Animate -> transition (step 1.5) */
+.content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-md);
+  min-height: 192px;
+  padding: var(--padding-lg);
+}
+
+.separator {
+  width: 40px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--color-primary);
+}
+
+.content h2 {
+  color: var(--color-neutral-grey-900);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semi-bold);
+  letter-spacing: -0.64px;
+  line-height: normal;
+}
+
+.content p {
+  min-width: 100%;
+  color: var(--color-neutral-grey-800);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: 25px;
+}
+
+.close {
+  align-self: flex-end;
+  border: 0;
+  background: transparent;
+  color: var(--color-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modal-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}

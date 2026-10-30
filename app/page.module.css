@@ -1,14 +1,33 @@
 .page {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 2rem;
-  max-width: 48rem;
+  width: min(100%, 1048px);
+  min-height: 795px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 106px 78px;
+  background: var(--color-neutral-white);
 }
 
-.pills {
+.example {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1rem;
+  min-width: 0;
+}
+
+.pillRow {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+}
+
+@media (max-width: 760px) {
+  .page {
+    gap: 2rem;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
 }
